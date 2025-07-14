@@ -1,12 +1,54 @@
-# React + Vite
+# 📊 Leaderboard Points System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack web app where users can:
 
-Currently, two official plugins are available:
+- 🎯 Claim random points
+- 🧍 Add new users
+- 🏆 View dynamic leaderboard rankings
+- 📜 Track claim history (in backend)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🌐 Live Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** [https://your-frontend.vercel.app](https://your-frontend.vercel.app)
+- **Backend:** [https://leaderboard-task-ten.vercel.app](https://leaderboard-task-ten.vercel.app)
+
+---
+
+## ⚙️ Tech Stack
+
+| Frontend        | Backend           | Database           |
+|----------------|-------------------|--------------------|
+| ReactJS + Bootstrap | Node.js + Express | MongoDB Atlas (Mongoose) |
+
+---
+
+## 🚀 Features
+
+- Display a list of 10 users with their points
+- Add new users from the frontend (saved to MongoDB)
+- Click “Claim” to award 1–10 random points to a user
+- Points update dynamically and leaderboard reorders automatically
+- Claim history is recorded in a separate MongoDB collection
+
+---
+## 🔄 API Endpoints
+
+| Method | Endpoint             | Description            |
+| ------ | -------------------- | ---------------------- |
+| GET    | `/api/users`         | Get all users          |
+| POST   | `/api/users`         | Add a new user         |
+| POST   | `/api/claim/:userId` | Claim random points    |
+| GET    | `/api/history`       | (Optional) Get history |
+
+## 💻 Setup
+```
+git clone https://github.com/Rekhakumari28/Leaderboard.git
+cd Leaderboard
+npm install
+npm run dev
+```
+
+
+
